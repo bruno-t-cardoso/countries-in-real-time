@@ -35,7 +35,7 @@ const ThemeToggle: React.FC = () => {
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
           '&:hover': {
             backgroundColor: muiTheme.palette.mode === 'dark' 
-              ? 'rgba(255, 255, 255, 0.15)' 
+              ? 'rgba(0, 0, 0, 0.4)' 
               : 'rgba(0, 0, 0, 0.08)',
             transform: 'scale(1.05)',
             boxShadow: muiTheme.shadows[4],
