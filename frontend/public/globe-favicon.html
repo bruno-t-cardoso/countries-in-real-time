@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { margin: 0; background: #1976d2; }
+        .globe { 
+            width: 32px; 
+            height: 32px; 
+            background: radial-gradient(circle at 30% 30%, #4fc3f7, #1976d2);
+            border-radius: 50%;
+            position: relative;
+            margin: 0;
+        }
+        .land {
+            position: absolute;
+            background: #4caf50;
+            border-radius: 50%;
+        }
+        .land1 { width: 8px; height: 6px; top: 8px; left: 6px; }
+        .land2 { width: 6px; height: 4px; top: 12px; right: 8px; }
+        .land3 { width: 10px; height: 5px; bottom: 6px; left: 8px; }
+    </style>
+</head>
+<body>
+    <div class="globe">
+        <div class="land land1"></div>
+        <div class="land land2"></div>
+        <div class="land land3"></div>
+    </div>
+</body>
+</html>

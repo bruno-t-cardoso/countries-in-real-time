@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm start)",
+      "Bash(curl:*)",
+      "Bash(npm install:*)",
+      "Bash(taskkill:*)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(echo $env:APPDATA)",
+      "Bash(mkdir:*)",
+      "Bash(setx:*)",
+      "Bash(reg query:*)",
+      "Bash(gh:*)",
+      "Bash(echo $MCP_SERVERS)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}

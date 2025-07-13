@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <style>
+      .globe { fill: #1976d2; }
+      .land { fill: #4caf50; }
+      .water { fill: #2196f3; }
+    </style>
+  </defs>
+  
+  <!-- Globe background -->
+  <circle cx="16" cy="16" r="15" class="water" stroke="#0d47a1" stroke-width="1"/>
+  
+  <!-- Continents -->
+  <path d="M5 12 Q8 10, 12 12 Q15 14, 18 12 Q22 10, 26 12 Q28 14, 26 18 Q24 20, 20 18 Q16 16, 12 18 Q8 20, 5 18 Z" class="land"/>
+  <path d="M8 22 Q12 20, 16 22 Q20 24, 24 22 Q26 20, 24 26 Q20 28, 16 26 Q12 28, 8 26 Z" class="land"/>
+  <ellipse cx="16" cy="8" rx="4" ry="2" class="land"/>
+  
+  <!-- Grid lines -->
+  <path d="M1 16 L31 16" stroke="#0d47a1" stroke-width="0.5" opacity="0.6"/>
+  <path d="M16 1 L16 31" stroke="#0d47a1" stroke-width="0.5" opacity="0.6"/>
+  <ellipse cx="16" cy="16" rx="15" ry="7" fill="none" stroke="#0d47a1" stroke-width="0.5" opacity="0.6"/>
+</svg>
