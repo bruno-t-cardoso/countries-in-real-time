@@ -1,7 +1,26 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "countries-live-frontend",
+  "version": "1.0.0",
+  "description": "Real-time world population data with beautiful visualizations",
   "private": true,
+  "homepage": ".",
+  "keywords": [
+    "react",
+    "typescript",
+    "countries",
+    "population",
+    "statistics",
+    "data-visualization",
+    "real-time",
+    "dashboard"
+  ],
+  "author": "bruno-t-cardoso",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bruno-t-cardoso/countries-in-real-time.git",
+    "directory": "frontend"
+  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -24,11 +43,21 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "prettier": "^3.2.4"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "test:ci": "CI=true react-scripts test --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "format": "prettier --write src/**/*.{ts,tsx,json,css,md}",
+    "format:check": "prettier --check src/**/*.{ts,tsx,json,css,md}",
+    "type-check": "tsc --noEmit",
+    "analyze": "npm run build && npx source-map-explorer 'build/static/js/*.js'",
+    "serve": "npx serve -s build -l 3000"
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +76,26 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/index.tsx",
+      "!src/reportWebVitals.ts",
+      "!src/setupTests.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   }
 }
