@@ -1,15 +1,53 @@
 {
   "name": "countries-backend",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "Real-time countries data API with web scraping capabilities",
+  "main": "src/server.js",
   "type": "commonjs",
+  "keywords": [
+    "countries",
+    "population",
+    "statistics",
+    "api",
+    "webscraping",
+    "real-time"
+  ],
+  "author": "bruno-t-cardoso",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bruno-t-cardoso/countries-in-real-time.git"
+  },
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "logs:clear": "rm -rf logs/*.log",
+    "logs:view": "tail -f logs/app.log",
+    "health": "curl http://localhost:5000/api/v1/health"
   },
   "dependencies": {
     "express": "^4.18.2",
     "axios": "^1.6.8",
     "cheerio": "^1.0.0-rc.12",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "winston": "^3.11.0",
+    "morgan": "^1.10.0",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "xss": "^1.0.14",
+    "express-mongo-sanitize": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "eslint": "^8.56.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   }
-} 
+}
