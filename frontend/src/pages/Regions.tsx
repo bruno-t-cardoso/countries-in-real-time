@@ -32,8 +32,8 @@ const Regions: React.FC = () => {
     const fetchRegions = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5000/api/regions');
-        setRegions(response.data);
+        const response = await axios.get('http://localhost:5000/api/v1/countries/regions');
+        setRegions(response.data.data);
         setError(null);
       } catch (err) {
         setError('Failed to fetch regions data.');

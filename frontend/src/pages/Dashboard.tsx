@@ -42,12 +42,12 @@ const Dashboard: React.FC = () => {
       try {
         setLoading(true);
         const [statsResponse, regionsResponse] = await Promise.all([
-          axios.get('http://localhost:5000/api/world-stats'),
-          axios.get('http://localhost:5000/api/regions')
+          axios.get('http://localhost:5000/api/v1/countries/world-stats'),
+          axios.get('http://localhost:5000/api/v1/countries/regions')
         ]);
         
-        setWorldStats(statsResponse.data);
-        setRegions(regionsResponse.data);
+        setWorldStats(statsResponse.data.data);
+        setRegions(regionsResponse.data.data);
         setError(null);
       } catch (err) {
         setError('Failed to fetch data. Please make sure the backend server is running.');

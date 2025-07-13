@@ -47,9 +47,9 @@ const Countries: React.FC = () => {
     const fetchCountries = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5000/api/countries');
-        setCountries(response.data);
-        setFilteredCountries(response.data);
+        const response = await axios.get('http://localhost:5000/api/v1/countries');
+        setCountries(response.data.data);
+        setFilteredCountries(response.data.data);
         setError(null);
       } catch (err) {
         setError('Failed to fetch countries data.');
