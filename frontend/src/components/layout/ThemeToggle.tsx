@@ -24,13 +24,19 @@ const ThemeToggle: React.FC = () => {
       <IconButton
         onClick={toggleTheme}
         sx={{
-          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          backgroundColor: muiTheme.palette.mode === 'dark' 
+            ? 'rgba(255, 255, 255, 0.1)' 
+            : 'rgba(0, 0, 0, 0.05)',
           backdropFilter: 'blur(10px)',
-          border: '1px solid rgba(255, 255, 255, 0.2)',
+          border: muiTheme.palette.mode === 'dark'
+            ? '1px solid rgba(255, 255, 255, 0.2)'
+            : '1px solid rgba(0, 0, 0, 0.1)',
           color: 'inherit',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
           '&:hover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            backgroundColor: muiTheme.palette.mode === 'dark' 
+              ? 'rgba(255, 255, 255, 0.15)' 
+              : 'rgba(0, 0, 0, 0.08)',
             transform: 'scale(1.05)',
             boxShadow: muiTheme.shadows[4],
           },
