@@ -14,7 +14,10 @@
       "Bash(gh:*)",
       "Bash(echo $MCP_SERVERS)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(git push:*)"
     ],
     "deny": []
   }
