@@ -27,8 +27,8 @@ const createRateLimiter = (windowMs = config.rateLimit.windowMs, max = config.ra
 // General API rate limiter
 const apiLimiter = createRateLimiter();
 
-// Strict rate limiter for expensive operations
-const strictLimiter = createRateLimiter(15 * 60 * 1000, 10); // 10 requests per 15 minutes
+// Moderate rate limiter for API endpoints (allowing for real-time polling)
+const strictLimiter = createRateLimiter(1 * 60 * 1000, 120); // 120 requests per minute
 
 // Security headers
 const securityHeaders = helmet({

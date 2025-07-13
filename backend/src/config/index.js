@@ -14,8 +14,8 @@ const config = {
     timeout: parseInt(process.env.SCRAPER_TIMEOUT) || 10000
   },
   rateLimit: {
-    windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 15 * 60 * 1000, // 15 minutes
-    maxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS) || 100
+    windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 5 * 60 * 1000, // 5 minutes
+    maxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS) || 500 // 500 requests per 5 minutes
   },
   logging: {
     level: process.env.LOG_LEVEL || 'info',

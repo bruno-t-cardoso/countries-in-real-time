@@ -5,7 +5,7 @@ const { validateLimit } = require('../../middleware/validation');
 const { strictLimiter } = require('../../middleware/security');
 const asyncHandler = require('../../middleware/asyncHandler');
 
-// Apply strict rate limiting to all routes in this file
+// Apply moderate rate limiting to all routes in this file
 router.use(strictLimiter);
 
 /**
