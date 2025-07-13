@@ -1,6 +1,7 @@
 {
-  "short_name": "Population Dashboard",
-  "name": "World Population Dashboard",
+  "short_name": "Countries Live",
+  "name": "Countries Live - Real-time Population Data",
+  "description": "Real-time world population data with beautiful visualizations and analytics",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,46 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#2563eb",
+  "background_color": "#f8fafc",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["education", "utilities", "productivity"],
+  "lang": "en",
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View world population dashboard",
+      "url": "/",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Countries",
+      "short_name": "Countries",
+      "description": "Browse all countries data",
+      "url": "/countries",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Regions",
+      "short_name": "Regions",
+      "description": "View regional statistics",
+      "url": "/regions",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    }
+  ]
 }
