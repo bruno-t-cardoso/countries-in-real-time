@@ -20,6 +20,16 @@ const ThemeToggle: React.FC = () => {
     <Tooltip 
       title={`Switch to ${mode === 'light' ? 'dark' : 'light'} mode`}
       TransitionComponent={Zoom}
+      componentsProps={{
+        tooltip: {
+          sx: {
+            backgroundColor: muiTheme.palette.mode === 'dark' ? '#1f2937' : '#374151',
+            color: muiTheme.palette.mode === 'dark' ? '#f9fafb' : '#ffffff',
+            fontSize: '0.75rem',
+            fontWeight: 500,
+          }
+        }
+      }}
     >
       <IconButton
         onClick={toggleTheme}

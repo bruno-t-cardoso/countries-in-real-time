@@ -177,7 +177,19 @@ const EnhancedNavbar: React.FC = () => {
 
           {/* Actions */}
           <Box display="flex" alignItems="center" gap={1} ml={2}>
-            <Tooltip title="View on GitHub">
+            <Tooltip 
+              title="View on GitHub"
+              componentsProps={{
+                tooltip: {
+                  sx: {
+                    backgroundColor: theme.palette.mode === 'dark' ? '#1f2937' : '#374151',
+                    color: theme.palette.mode === 'dark' ? '#f9fafb' : '#ffffff',
+                    fontSize: '0.75rem',
+                    fontWeight: 500,
+                  }
+                }
+              }}
+            >
               <IconButton
                 component="a"
                 href="https://github.com/bruno-t-cardoso/countries-in-real-time"
