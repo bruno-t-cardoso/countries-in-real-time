@@ -31,12 +31,13 @@ const ThemeToggle: React.FC = () => {
           border: muiTheme.palette.mode === 'dark'
             ? '1px solid rgba(255, 255, 255, 0.2)'
             : '1px solid rgba(0, 0, 0, 0.1)',
-          color: 'inherit',
+          color: muiTheme.palette.mode === 'dark' ? '#94a3b8' : 'inherit',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
           '&:hover': {
             backgroundColor: muiTheme.palette.mode === 'dark' 
-              ? 'rgba(0, 0, 0, 0.4)' 
+              ? 'rgba(255, 255, 255, 0.9)' 
               : 'rgba(0, 0, 0, 0.08)',
+            color: muiTheme.palette.mode === 'dark' ? '#1e293b' : 'inherit',
             transform: 'scale(1.05)',
             boxShadow: muiTheme.shadows[4],
           },

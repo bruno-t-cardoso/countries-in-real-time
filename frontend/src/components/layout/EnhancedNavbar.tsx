@@ -184,11 +184,11 @@ const EnhancedNavbar: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
-                  color: 'text.secondary',
+                  color: theme.palette.mode === 'dark' ? '#94a3b8' : 'text.secondary',
                   '&:hover': {
-                    color: 'text.primary',
+                    color: theme.palette.mode === 'dark' ? '#1e293b' : 'text.primary',
                     backgroundColor: theme.palette.mode === 'dark' 
-                      ? 'rgba(0, 0, 0, 0.3)' 
+                      ? 'rgba(255, 255, 255, 0.9)' 
                       : 'rgba(0, 0, 0, 0.04)',
                     transform: 'scale(1.1)',
                   }
